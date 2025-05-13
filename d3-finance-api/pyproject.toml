@@ -22,7 +22,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "d3_finance_api", from = "src"}]
+packages = [{include = "src", from = "d3_finance_api"}]
 
 [tool.poetry.group.dev.dependencies]
 black = "^25.1.0"
