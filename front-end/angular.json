@@ -13,12 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "fileReplacements": [
-              {
-                "replace": "src/environments/environment.ts",
-                "with":    "src/environments/environment.prod.ts"
-              }
-            ],
             "outputPath": "dist/tcc",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -45,6 +39,13 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with":    "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
